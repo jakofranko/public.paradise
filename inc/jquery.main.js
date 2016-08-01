@@ -2,6 +2,7 @@ var queue = [];
 
 $(document).ready(function()
 {	
+	begin();
 	apiCall("connect");
 	$(document).on('keydown', 'input', function(e) {
 	    if(e.which == 13) {
@@ -13,6 +14,17 @@ $(document).ready(function()
 	updateTerminal();
 	$("input").focus();
 });
+
+function begin()
+{
+	var responseHeight = 20;
+	var screenHeight = $(window).height() - 100;
+	var responseLimit = Math.ceil(screenHeight/responseHeight);
+
+	for (var i = responseLimit - 1; i >= 0; i--) {
+		$("terminal").append("<response></response>")
+	}
+}
 
 function apiCall(command)
 {
@@ -68,6 +80,15 @@ function updateTerminal()
 		queue.splice(0, 1);	
 	}
 	setTimeout(function(){ updateTerminal(); }, 100);
+
+	var responseHeight = 20;
+	var screenHeight = $(window).height() - 100;
+	var responseLimit = Math.ceil(screenHeight/responseHeight);
+	var responseCount = $("terminal").children().length;
+	
+	if(responseCount > responseLimit-2){
+		$('terminal response').first().remove();
+	}
 }
 
 $(window).resize(function()

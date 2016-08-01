@@ -1,6 +1,6 @@
 body { font-family: "Input Mono"; font-size:12px; background:black; overflow-x: hidden}
 terminal { display: block; width:100vw; height:calc(100vh - 45px); padding-top:15px;}
-terminal response { color:white; padding:0px 15px; display: block; line-height: 20px; width:75vw; padding-left:30px}
+terminal response { color:white; padding:0px 15px; display: block; line-height: 20px; width:75vw; padding-left:30px; min-height: 20px}
 terminal response rune { display: inline-block; margin-right:10px; color:#555; position: absolute; left:15px; max-width: 500px}
 terminal response action { font-weight: bold; cursor: pointer; }
 terminal response action:hover { text-decoration: underline; }
