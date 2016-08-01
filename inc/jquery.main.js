@@ -11,13 +11,14 @@ $(document).ready(function()
 	    }
 	});
 	updateTerminal();
+	$("input").focus();
 });
 
 function apiCall(command)
 {
 	console.log("API > "+command);
 	responded("> <span class='user'>"+command+"</span>");
-	var response = "* You are {{the unknown geomaitre}} in {{your pretty microwave}}.\n& Today is your lucky day, you are finaly free from chains. Today is your lucky day, you are finaly free from chains.\n# create a teapot\n- {{Your panther}}\n- {{Your liger}}\n- {{your golden machine}}\n- {{your automated whale}}";
+	var response = "* You are {{the unknown geomaitre}} in {{your pretty microwave|leave}}.\n& Today is your lucky day, you are finaly free from chains. Lucky day, you are finaly free from chains.\n# create a teapot\n- {{Your panther|enter your panther}}\n- {{Your liger|enter your panther}}\n- {{your golden machine|use your machine}}\n- {{your automated whale|use your machine}}";
 	responded(response);
 }
 
@@ -31,18 +32,31 @@ function responded(response)
 
 function markup(text)
 {
+	// Rune
 	var rune = text.charAt(0);
 	text = text.replace(rune+" ","<rune>"+rune+"</rune>");
 
+	// Templates
 	templates = text.match(/\{\{(.*?)\}\}/g);
-
 	if(templates == null){ return text; }
 
+	// Actions
 	for (i = 0; i < templates.length; i++) { 
-	    text = text.replace(templates[i],"<action>"+templates[i]+"</action>");
+		var name = templates[i].indexOf("|") > -1 ? templates[i].split("|")[0] : templates[i];
+		var action = templates[i].indexOf("|") > -1 ? templates[i].split("|")[1] : templates[i];
+	    text = text.replace(templates[i],"<action data='"+action+"'>"+name+"</action>");
 	}
+
+	// Cleanup
 	text = text.split("{{").join("");
 	text = text.split("}}").join("");
+
+	// Bind
+	$("action").on( "click", function() {
+		var cmd = $(this).attr("data");
+		$("input").val(cmd);
+		$("input").focus();
+	});
 
 	return text;
 }
