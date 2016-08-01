@@ -1,5 +1,5 @@
 body { font-family: "Input Mono"; font-size:12px; background:black; }
 terminal { display: block; width:100vw; height:calc(100vh - 30px); white-space: pre; }
-terminal response { color:white; padding:0px 15px; display: block}
+terminal response { color:white; padding:0px 15px; display: block; line-height: 20px}
 input { padding:15px 15px; width:calc(100vw - 30px); color:white; position: fixed; bottom:0px; background:black; }
-input:before { content: ">"; color:white; }
+command:before { content: ">"; color:white; display: block; background: red; position: fixed; top:0px; left:0px;}
