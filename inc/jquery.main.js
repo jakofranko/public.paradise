@@ -1,7 +1,10 @@
+var vesselId = 3;
 var queue = [];
 
 $(document).ready(function()
-{	
+{
+	vesselId = window.location.hash.match(/\d+/) | 3;
+
 	begin();
 	apiCall("connect");
 	$(document).on('keydown', 'input', function(e) {
@@ -28,10 +31,13 @@ function begin()
 
 function apiCall(command)
 {
-	console.log("API > "+command);
-	responded("> <span class='user'>"+command+"</span>");
-	var response = "* You are {{the unknown geomaitre}} in {{your pretty microwave|leave}}.\n& Today is your lucky day, you are finaly free from chains. Lucky day, you are finaly free from chains.\n# create a teapot\n- {{Your panther|enter your panther}}\n- {{Your liger|enter your panther}}\n- {{your golden machine|use your machine}}\n- {{your automated whale|use your machine}}";
-	responded(response);
+	responded("> <span class='user'>"+(command == "" ? "look" : command)+"</span>");
+
+	var cmd = "paradise_"+vesselId+"_"+command.replace(/ /g,"_");
+	console.log("API > "+cmd);
+	$.ajax({ type: "GET", url: "http://api.xxiivv.com/index.php", data: { command:cmd } }).done(function( response ) {
+		responded(response);
+	});	
 }
 
 function responded(response)
@@ -90,18 +96,3 @@ function updateTerminal()
 		$('terminal response').first().remove();
 	}
 }
-
-$(window).resize(function()
-{
-
-});
-
-$(window).load(function()
-{
-
-});
-
-$(window).scroll(function()
-{
-
-});
