@@ -42,10 +42,18 @@ function apiCall(command)
 
 function responded(response)
 {
+	if( response.indexOf("::") > -1 ){ become(response.match(/\d+/)) ; return; }
+
 	var lines = response.split("\n");
 	for (i = 0; i < lines.length; i++) { 
 	    queue.push(lines[i]);
 	}
+}
+
+function become(vesselId)
+{
+	window.location.hash = "#"+vesselId;
+	location.reload();
 }
 
 function markup(text)
