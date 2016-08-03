@@ -92,7 +92,7 @@ function updateTerminal()
 	var responseLimit = Math.ceil(screenHeight/responseHeight);
 	var responseCount = $("terminal").children().length;
 	
-	if(responseCount > responseLimit-2){
+	if(responseCount > responseLimit-2 && responseCount > 10){
 		$('terminal response').first().remove();
 	}
 }
