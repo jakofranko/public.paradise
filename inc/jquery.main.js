@@ -62,9 +62,11 @@ function markup(text)
 	var rune = text.charAt(0);
 	text = text.replace(rune+" ","<rune>"+rune+"</rune>");
 
+
+
 	// Templates
 	templates = text.match(/\{\{(.*?)\}\}/g);
-	if(templates == null){ return text; }
+	if(templates == null){ console.log("Found nothing: "+text); return text; }
 
 	// Actions
 	for (i = 0; i < templates.length; i++) { 
