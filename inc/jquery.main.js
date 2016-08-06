@@ -3,7 +3,8 @@ var queue = [];
 
 $(document).ready(function()
 {
-	vesselId = window.location.hash.match(/\d+/) | 3;
+	vesselId = window.location.hash.match(/\d+/);
+	if(!vesselId){ vesselId = 3; }
 
 	begin();
 	apiCall("connect");
@@ -32,7 +33,6 @@ function begin()
 function apiCall(command)
 {
 	responded("> <span class='user'>"+(command == "" ? "look" : command)+"</span>");
-
 	var cmd = "paradise_"+vesselId+"_"+command.replace(/ /g,"_");
 	console.log("API > "+cmd);
 	$.ajax({ type: "GET", url: "http://api.xxiivv.com/index.php", data: { command:cmd } }).done(function( response ) {
@@ -62,11 +62,9 @@ function markup(text)
 	var rune = text.charAt(0);
 	text = text.replace(rune+" ","<rune>"+rune+"</rune>");
 
-
-
 	// Templates
 	templates = text.match(/\{\{(.*?)\}\}/g);
-	if(templates == null){ console.log("Found nothing: "+text); return text; }
+	if(templates == null){ return text; }
 
 	// Actions
 	for (i = 0; i < templates.length; i++) { 
@@ -82,6 +80,7 @@ function markup(text)
 	// Bind
 	$("action").on( "click", function() {
 		var cmd = $(this).attr("data");
+		console.log($(this));
 		$("input").val(cmd);
 		$("input").focus();
 	});
