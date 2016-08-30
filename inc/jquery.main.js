@@ -33,7 +33,7 @@ function begin()
 function apiCall(command)
 {
 	responded("> <span class='user'>"+(command == "" ? "look" : command)+"</span>");
-	var cmd = "paradise_"+vesselId+"_"+command.replace(/ /g,"_");
+	var cmd = vesselId+"_"+command.replace(/ /g,"_");
 	console.log("API > "+cmd);
 	$.ajax({ type: "GET", url: "http://api.xxiivv.com/index.php", data: { command:cmd } }).done(function( response ) {
 		responded(response);
