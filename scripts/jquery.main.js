@@ -1,34 +1,33 @@
 var vesselId = 3;
 var queue = [];
 
+function Vessel(element)
+{
+	this.action = element.attr("data-action");
+	this.name = element.attr("data-name");
+	this.attr = element.attr("data-attr");
+}
+
 $(document).ready(function()
 {
 	vesselId = window.location.hash.match(/\d+/);
-	if(!vesselId){ vesselId = 3; }
 
-	begin();
-	apiCall("connect");
-	$(document).on('keydown', 'input', function(e) {
-	    if(e.which == 13) {
-	    	apiCall($("input").val());
-	    	$("input").val("");
-	        return false;
-	    }
-	});
-	updateTerminal();
 	$("input").focus();
+
+	$(document).on('keydown', 'input', function(e) {
+	  if(e.which != 13) { return; }
+	  window.location = "4+"+$("input").val().replace(/\ /g,"+");
+  	$("input").val("");
+    return false;
+	});
+
+	$("vessel").on("click", function()
+	{
+		var vessel = new Vessel($(this));
+		$("input").val(vessel.action);
+		$("input").focus();
+	});
 });
-
-function begin()
-{
-	var responseHeight = 20;
-	var screenHeight = $(window).height() - 100;
-	var responseLimit = Math.ceil(screenHeight/responseHeight);
-
-	for (var i = responseLimit - 1; i >= 0; i--) {
-		$("terminal").append("<response></response>")
-	}
-}
 
 function apiCall(command)
 {

@@ -1,6 +1,6 @@
-body { font-family: 'lora_regular';font-size: 20px;max-width: 600px;margin: 0px auto;line-height: 40px;background: #eee;padding: 30px}
-view { display: block;background: white;padding: 60px;position: relative;border-radius: 3px;overflow: hidden; padding-bottom:90px;}
-input { width: calc(100% - 30px);font-family: 'input_mono_medium';font-size: 14px;line-height: 16px;background: black;padding: 20px 60px;position: absolute;left: 0px;bottom: 0px; color:white;}
+body { font-family: 'lora_regular';font-size: 20px;max-width: 600px;margin: 0px auto;line-height: 40px;background: #eee;padding: 60px}
+view { display: block;background: black;padding: 60px;position: relative;border-radius: 3px;overflow: hidden; padding-bottom:90px; color:white;}
+input { width: calc(100% - 30px);font-family: 'input_mono_medium';font-size: 14px;line-height: 16px;background: black;padding: 20px 60px;position: absolute;left: 0px;bottom: 0px; color:white;border-top: 1px solid #333}
 p:nth-child(1) { font-size:26px; width:75%; }
 p:nth-child(2):before { content:">"; font-family: 'input_mono_medium'; position:absolute;color:#ccc; margin-left:-30px; font-size:14px; line-height: 50px}
 
@@ -11,4 +11,4 @@ vessel attr {  }
 
 p { margin-bottom:30px; }
 p.note { font-family: 'lora_italic'; }
-page { display: block;font-family: 'input_mono_regular';color: #999;position: absolute;left: 0px;bottom: 0px;font-size: 12px;line-height: 19px;padding: 20px 0px;text-align: right;width: 45px}
+page { display: block;font-family: 'input_mono_regular';color: #999;position: absolute;left: 0px;bottom: 0px;font-size: 12px;line-height: 16px;padding: 20px 0px;text-align: right;width: 45px}
