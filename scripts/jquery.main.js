@@ -8,6 +8,12 @@ function Vessel(element)
 	this.attr = element.attr("data-attr");
 }
 
+function Action(element)
+{
+	this.action = element.attr("data-action");
+	this.target = element.attr("data-target");
+}
+
 $(document).ready(function()
 {
 	vesselId = window.location.hash.match(/\d+/);
@@ -25,6 +31,13 @@ $(document).ready(function()
 	{
 		var vessel = new Vessel($(this));
 		$("input").val(vessel.action);
+		$("input").focus();
+	});
+
+	$("action").on("click", function()
+	{
+		var action = new Action($(this));
+		$("input").val(action.action);
 		$("input").focus();
 	});
 });
