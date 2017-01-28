@@ -1,5 +1,5 @@
-body { font-family: 'lora_regular';font-size: 20px;max-width: 600px;margin: 0px auto;line-height: 40px;background: #eee;padding: 60px}
-view { display: block;background: black;padding: 30px 60px;position: relative;border-radius: 3px;overflow: hidden; padding-bottom:90px; color:white;}
+body { font-family: 'lora_regular';font-size: 20px;max-width: 600px;margin: 0px auto;line-height: 40px;background: #eee;padding: 90px}
+view { display: block;background: black;padding:60px;position: relative;border-radius: 3px;overflow: hidden; padding-bottom:110px; color:white;}
 input { width: calc(100% - 30px);font-family: 'input_mono_medium';font-size: 14px;line-height: 16px;background: black;padding: 20px 60px;position: absolute;left: 0px;bottom: 0px; color:white;border-top: 1px solid #333}
 
 p { margin-bottom:30px; }
@@ -7,15 +7,34 @@ p.note { font-family: 'lora_italic'; }
 p:nth-child(1) { font-size:26px; width:75%; }
 p:nth-child(2):before { content:">"; font-family: 'input_mono_medium'; position:absolute;color:#ccc; margin-left:-30px; font-size:14px; line-height: 40px}
 
-p.guide { font-family: 'input_mono_medium'; font-size:11px; color:#999; }
+.guide { font-family: 'input_mono_medium'; font-size:11px; color:#999; }
+.guide li { line-height: 20px }
+p.answer { color:#999; }
 
-page { display: block;font-family: 'input_mono_regular';color: #999;position: absolute;left: 0px;bottom: 0px;font-size: 12px;line-height: 16px;padding: 20px 0px;text-align: right;width: 45px}
+page { display: none;font-family: 'input_mono_regular';color: #999;position: absolute;left: 60px;top: 0px;font-size: 12px;line-height: 10px;padding: 20px 0px;width: 45px}
 
 vessel { font-family: 'lora_italic'; }
 vessel name:hover { text-decoration: underline; cursor:pointer; }
 vessel name { font-family: 'lora_bold_italic'; }
 vessel attr {  }
+vessel.program:after {content:"*"; color:#92de9f;}
+vessel.stem:after {content:"~"; color:#92de9f;}
+vessel.warp:after {content:"º"; color:#92de9f;}
+vessel.machine:after {content:"`"; color:#92de9f;}
 
 action { display:inline; font-family: 'input_mono_medium';}
 action:hover { text-decoration: underline; cursor:pointer; }
 p action {font-size:18px;}
+
+.help { position:absolute; top:70px; left:20px; display:block; width:20px; height:20px; opacity: 0.25}
+.help img { display:block; }
+.help:hover { opacity: 1 }
+.say { position:absolute; bottom:18px; left:20px; display:block; width:20px; height:20px; opacity: 0.25}
+.say img { display:block; }
+.say:hover { opacity: 1 }
+.status { position:absolute; left:20px; display:block; width:20px; height:20px; opacity: 0.25; margin-top:10px}
+.status img { display:block; }
+.status:hover { opacity: 1 }
+.chat { position:absolute; left:300px; display:block; width:20px; height:20px; opacity: 0.25; margin-top:10px}
+.chat img { display:block; }
+.chat:hover { opacity: 1 }

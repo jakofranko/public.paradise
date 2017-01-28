@@ -16,13 +16,14 @@ function Action(element)
 
 $(document).ready(function()
 {
-	vesselId = window.location.hash.match(/\d+/);
+	vesselUrl = window.location.pathname.replace("/","");
+	vesselId = parseInt(vesselUrl.split("+")[0]);
 
 	$("input").focus();
 
 	$(document).on('keydown', 'input', function(e) {
 	  if(e.which != 13) { return; }
-	  window.location = "4+"+$("input").val().replace(/\ /g,"+");
+	  window.location = vesselId+"+"+$("input").val().replace(/\ /g,"+");
   	$("input").val("");
     return false;
 	});
