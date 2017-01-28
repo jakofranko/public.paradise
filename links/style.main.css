@@ -36,6 +36,11 @@ p action {font-size:18px;}
 .status { position:absolute; left:20px; display:block; width:20px; height:20px; opacity: 0.25; margin-top:10px}
 .status img { display:block; }
 .status:hover { opacity: 1 }
-.chat { position:absolute; left:300px; display:block; width:20px; height:20px; opacity: 0.25; margin-top:10px}
-.chat img { display:block; }
-.chat:hover { opacity: 1 }
+.expand_chat { position:absolute; left:300px; display:block; width:20px; height:20px; opacity: 0.25; margin-top:10px}
+.expand_chat img { display:block; }
+.expand_chat:hover { opacity: 1 }
+
+.forum { max-height: 160px;overflow: hidden; border-top: 1px solid #555;padding-top: 20px }
+.forum.expanded { max-height: 600px }
+.forum li { border-left: 1px solid #333;padding-left: 30px;margin-left:-30px }
+.forum li:hover { border-left:1px solid white; }
