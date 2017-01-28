@@ -2,6 +2,9 @@ html { background:url(../../public.paradise/media/vectors/background.svg); backg
 body { font-family: 'lora_regular';font-size: 20px;max-width: 600px;margin: 0px auto;line-height: 40px;padding: 90px}
 view { display: block;background: black;padding:60px;position: relative;border-radius: 3px;overflow: hidden; padding-bottom:110px; color:white;}
 input { width: calc(100% - 30px);font-family: 'input_mono_medium';font-size: 14px;line-height: 16px;background: black;padding: 20px 60px;position: absolute;left: 0px;bottom: 0px; color:white;border-top: 1px solid #333}
+table { font-family: 'input_mono_medium';font-size: 14px; line-height: 20px }
+table tr td { padding-right:15px; }
+table tr th { color:#999; text-align: left; line-height: 30px}
 
 p { margin-bottom:30px; }
 p.note { font-family: 'lora_italic'; }
@@ -22,6 +25,8 @@ vessel.program:after {content:"*"; color:#92de9f;}
 vessel.stem:after {content:"~"; color:#92de9f;}
 vessel.warp:after {content:"º"; color:#92de9f;}
 vessel.machine:after {content:"`"; color:#92de9f;}
+vessel attr.red { color:red; }
+vessel attr.cyan { color:#72dec2; }
 
 action { display:inline; font-family: 'input_mono_medium';}
 action:hover { text-decoration: underline; cursor:pointer; }
@@ -40,7 +45,7 @@ p action {font-size:18px;}
 .expand_chat img { display:block; }
 .expand_chat:hover { opacity: 1 }
 
-.forum { max-height: 160px;overflow: hidden; border-top: 1px solid #555;padding-top: 20px }
+.forum { max-height: 160px;overflow-y: hidden; border-top: 1px solid #555;padding-top: 20px; margin-bottom:30px; }
 .forum.expanded { max-height: 600px }
 .forum li { border-left: 1px solid #333;padding-left: 30px;margin-left:-30px }
 .forum li:hover { border-left:1px solid white; }
