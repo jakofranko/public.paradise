@@ -5,7 +5,7 @@ view { display: block;background: black;padding:60px;position: relative;border-r
 input { width: calc(100% - 120px);font-family: 'input_mono_medium';font-size: 14px;line-height: 16px;background: black;padding: 20px 60px;position: absolute;left: 0px;bottom: 0px; color:white;border-top: 1px solid #333}
 table { font-family: 'input_mono_medium';font-size: 14px; line-height: 20px; margin-bottom:30px;}
 table tr td { padding-right:15px; }
-table tr th { color:#999; text-align: left; line-height: 30px}
+table tr th { color:#999; text-align: left; line-height: 30px; padding-right:15px;}
 
 p { margin-bottom:30px; }
 p a { text-decoration: underline; }
@@ -23,10 +23,10 @@ vessel { font-family: 'lora_italic'; }
 vessel name:hover { text-decoration: underline; cursor:pointer; }
 vessel name { font-family: 'lora_bold_italic'; }
 vessel attr {  }
-vessel.program:after {content:"*"; color:#92de9f;}
-vessel.stem:after {content:"~"; color:#92de9f;}
-vessel.warp:after {content:"º"; color:#92de9f;}
-vessel.machine:after {content:"`"; color:#92de9f;}
+vessel.program:after {content:"*"; color:#fff;}
+vessel.stem:after {content:"~"; color:#fff;}
+vessel.warp:after {content:"º"; color:#fff;}
+vessel.machine:after {content:"`"; color:#fff;}
 vessel attr.red { color:red; }
 vessel attr.cyan { color:#72dec2; }
 
