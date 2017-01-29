@@ -1,12 +1,14 @@
-html { background:url(../../public.paradise/media/vectors/background.svg); background-color: #eee; background-position:center center; }
+html { background-color: #eee; }
 body { font-family: 'lora_regular';font-size: 20px;max-width: 600px;margin: 0px auto;line-height: 40px;padding: 90px}
-view { display: block;background: black;padding:60px;position: relative;border-radius: 3px;overflow: hidden; padding-bottom:110px; color:white;}
+bg { background:url(../../public.paradise/media/vectors/background.svg); background-position:center center; width:100vw; height:100vh; display:block; position: fixed; left:0px; top:0px; }
+view { display: block;background: black;padding:60px;position: relative;border-radius: 3px;overflow: hidden; padding-bottom:90px; color:white;}
 input { width: calc(100% - 30px);font-family: 'input_mono_medium';font-size: 14px;line-height: 16px;background: black;padding: 20px 60px;position: absolute;left: 0px;bottom: 0px; color:white;border-top: 1px solid #333}
-table { font-family: 'input_mono_medium';font-size: 14px; line-height: 20px }
+table { font-family: 'input_mono_medium';font-size: 14px; line-height: 20px; margin-bottom:30px;}
 table tr td { padding-right:15px; }
 table tr th { color:#999; text-align: left; line-height: 30px}
 
 p { margin-bottom:30px; }
+p a { text-decoration: underline; }
 p.note { font-family: 'lora_italic'; }
 p:nth-child(1) { font-size:26px; width:75%; }
 p:nth-child(2):before { content:">"; font-family: 'input_mono_medium'; position:absolute;color:#ccc; margin-left:-30px; font-size:14px; line-height: 40px}
@@ -41,13 +43,13 @@ p action {font-size:18px;}
 .status { position:absolute; left:20px; display:block; width:20px; height:20px; opacity: 0.25; margin-top:10px}
 .status img { display:block; }
 .status:hover { opacity: 1 }
-.expand_chat { position:absolute; left:300px; display:block; width:20px; height:20px; opacity: 0.25; margin-top:10px}
+.expand_chat { position:absolute; left:300px; display:block; width:20px; height:20px; opacity: 0.25; margin-top:-10px}
 .expand_chat img { display:block; }
 .expand_chat:hover { opacity: 1 }
 
-.forum { max-height: 160px;overflow-y: hidden; border-top: 1px solid #555;padding-top: 20px; margin-bottom:30px; }
-.forum.expanded { max-height: 600px }
-.forum li { border-left: 1px solid #333;padding-left: 30px;margin-left:-30px; }
+.forum { overflow-y: hidden; border-top: 1px solid #555;padding-top: 20px; margin-bottom:30px; }
+.forum li { border-left: 1px solid #333;padding-left: 30px;margin-left:-30px; color:#999;}
+.forum li message { color:white; }
 .forum li:hover { border-left:1px solid white; }
 
 .forum li:nth-child(1){ display:none; }
