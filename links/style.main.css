@@ -48,7 +48,7 @@ p action {font-size:18px;}
 .expand_chat:hover { opacity: 1 }
 
 .forum { overflow-y: hidden; border-top: 1px solid #555;padding-top: 20px; margin-bottom:30px; }
-.forum li { border-left: 1px solid #333;padding-left: 30px;margin-left:-30px; color:#999;}
+.forum li { border-left: 1px solid #333;padding-left: 30px;margin-left:-30px; color:#999; font-size: 16px;line-height: 30px}
 .forum li message { color:white; }
 .forum li:hover { border-left:1px solid white; }
 
