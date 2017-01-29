@@ -47,5 +47,15 @@ p action {font-size:18px;}
 
 .forum { max-height: 160px;overflow-y: hidden; border-top: 1px solid #555;padding-top: 20px; margin-bottom:30px; }
 .forum.expanded { max-height: 600px }
-.forum li { border-left: 1px solid #333;padding-left: 30px;margin-left:-30px }
+.forum li { border-left: 1px solid #333;padding-left: 30px;margin-left:-30px; }
 .forum li:hover { border-left:1px solid white; }
+
+.forum li:nth-child(1){ display:none; }
+.forum li:nth-child(2){ display:none; }
+.forum li:nth-child(3){ display:none; }
+.forum li:nth-child(4){ display:none; }
+
+.forum.expanded li:nth-child(1){ display:block; }
+.forum.expanded li:nth-child(2){ display:block; }
+.forum.expanded li:nth-child(3){ display:block; }
+.forum.expanded li:nth-child(4){ display:block; }
