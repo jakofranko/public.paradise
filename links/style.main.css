@@ -11,7 +11,6 @@ p { margin-bottom:30px; }
 p a { text-decoration: underline; }
 p.note { font-family: 'lora_italic'; }
 p:nth-child(1) { font-size:26px; width:75%; }
-p:nth-child(2):before { content:">"; font-family: 'input_mono_medium'; position:absolute;color:#ccc; margin-left:-30px; font-size:14px; line-height: 40px}
 
 .guide { font-family: 'input_mono_medium'; font-size:11px; color:#999; }
 .guide li { line-height: 20px }
