@@ -5,7 +5,10 @@ view { display: block;background: #fff;padding:60px;position: relative;border-ra
 
 table { font-family: 'input_mono_medium';font-size: 14px; line-height: 30px; margin-bottom:30px;}
 table tr td { padding-right:15px; }
-table tr th { color:#999; text-align: left; padding-right:15px; border-bottom: 1px solid #ccc;}
+table tr th { color:#999; text-align: left; padding-right:15px; }
+table tr b { font-family: 'input_mono_regular';  }
+table tr .target { font-style: italic; color:#999; }
+table tr .params { text-decoration: underline; }
 
 p { margin-bottom:30px; }
 p a { text-decoration: underline; }
@@ -13,10 +16,13 @@ p.note { font-family: 'lora_italic'; }
 p:nth-child(1) { font-size:36px; width:75%; font-family: 'playfair_regular' }
 p:nth-child(1) vessel { font-family: 'playfair_bold' }
 p:nth-child(1) vessel name { font-family: 'playfair_black' }
+p:nth-child(1) b { font-family: 'playfair_bold' }
+p:nth-child(1) i { font-family: 'playfair_black_italic' }
 
 .guide { font-family: 'input_mono_medium'; font-size:11px; color:#000; margin-bottom: 20px;background:#efefef;padding:10px 20px }
 .guide li { line-height: 20px }
 .guide li action { font-family: 'input_mono_regular' }
+.guide.alert { background:white; border:1px solid red; color:red; border-radius: 100px}
 
 page { display: block;font-family: 'input_mono_regular';color: #000;font-size: 11px;line-height: 10px;padding: 20px 0px; text-align: center}
 
