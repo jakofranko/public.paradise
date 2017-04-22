@@ -23,8 +23,9 @@ p:nth-child(1) i { font-family: 'playfair_black_italic' }
 .guide li { line-height: 20px }
 .guide li action { font-family: 'input_mono_regular' }
 .guide.alert { background:white; border:1px solid red; color:red; border-radius: 100px}
+.guide.code { background:white; border:1px solid #eee; color:#999;}
 
-page { display: block;font-family: 'input_mono_regular';color: #000;font-size: 11px;line-height: 10px;padding: 20px 0px; text-align: center}
+page { display: block;font-family: 'input_mono_regular';color: #000;font-size: 11px;line-height: 10px;padding: 20px 0px; text-align: center; z-index:9000; position: relative;}
 
 vessel { font-family: 'lora_italic'; }
 vessel name:hover { text-decoration: underline; cursor:pointer; }
