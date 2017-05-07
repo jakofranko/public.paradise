@@ -11,6 +11,7 @@ table tr .target { font-style: italic; color:#999; }
 table tr .params { text-decoration: underline; }
 table action { font-size:12px; }
 table code { margin-bottom:0px; }
+table p { margin-bottom:0px; }
 
 h5 { font-size:36px; width:75%; font-family: 'playfair_regular'; line-height: 40px }
 h5 vessel { font-family: 'playfair_bold' }
@@ -23,6 +24,7 @@ h4 { font-family: 'playfair_regular'; text-transform: uppercase; text-align: cen
 
 code { font-family: 'input_mono_medium';display: block;font-size: 12px;margin-bottom: 30px;white-space: pre;line-height: 20px;background:#f1f1f1;padding:10px 15px}
 code comment { display: inline-block; color:#999; }
+code b { font-family: 'input_mono_regular' }
 
 p { margin-bottom:30px; line-height: 30px}
 p a { text-decoration: underline; }
