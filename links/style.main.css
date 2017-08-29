@@ -32,8 +32,8 @@ p b { font-family: "lora_bold_italic" }
 p i { font-family: "lora_italic" }
 p.small { font-size:16px; line-height: 24px }
 p.small action { font-family: "lora_bold_italic" }
-ul b { font-family: "lora_bold_italic" }
-ul i { font-family: "lora_italic" }
+/*ul b { font-family: "lora_bold_italic" }
+ul i { font-family: "lora_italic" }*/
 
 vessel { font-family: 'lora_italic'; }
 vessel:hover { text-decoration: underline; cursor:pointer; }
@@ -47,11 +47,12 @@ vessel.speaker:after {content:"`"; color:#555;}
 vessel.red:after { color:red; }
 vessel.cyan:after { color:#72dec2; }
 
-action { display:inline; font-family: 'input_mono_medium';}
-action:hover { text-decoration: underline; cursor:pointer; }
+action { border-bottom: 1px solid #ddd;display: inline;}
+action:hover { border-bottom: 1px solid #000;color:#000; cursor:pointer; }
 
 .terminal { position: relative;z-index: 900 }
-.terminal input { width: calc(100% - 120px);font-family: 'input_mono_medium';font-size: 14px;line-height: 16px;background: black;padding: 20px 60px;position: absolute;left: 0px;bottom: 0px; color:white;border-top: 1px solid #333; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px}
+.terminal input { width: calc(100% - 120px);font-family: 'input_mono_medium';font-size: 14px;line-height: 16px;background: #fff;padding: 20px 60px;position: absolute;left: 0px;bottom: 0px; color:#000;border-top: 1px solid #eee; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px}
+.terminal input:hover { background:#f9f9f9; }
 
 .terminal .help { position:absolute; top:70px; left:20px; display:block; width:20px; height:20px; opacity: 0.5; z-index: 9000}
 .terminal .help img { display:block; }
@@ -64,10 +65,12 @@ ul.basic { font-size:18px;line-height: 30px }
 ul.basic li:before { content: "";height: 3px;background: #ccc;width: 3px;display: block;position: absolute;left:35px;margin-top:15px; border-radius:10px;}
 ul.basic li action { font-family: 'lora_italic' }
 
-#page { font-size:14px; text-align: center; display:block; margin-bottom:30px;}
-
-#portal { text-transform: uppercase;font-size:28px;letter-spacing: 1px;margin-bottom:20px; line-height: 30px; font-family: 'playfair_regular'; text-align: center}
+#portal { text-transform: uppercase;font-size:35px;letter-spacing: 1px;margin-bottom:30px; line-height: 40px; font-family: 'playfair_regular'; text-align: center}
 #portal * { font-family: 'playfair_regular';  }
+
+#page { font-size:16px; text-align: center; display:block; margin-bottom:30px;}
+#page:before {content:"- "; color:#999;}
+#page:after {content:" -"; color:#999;}
 
 #note { font-family: 'lora_italic'; }
 #note vessel name { font-family: 'lora_italic'; }
@@ -80,13 +83,13 @@ ul.basic li action { font-family: 'lora_italic' }
 
 #forum { margin-bottom: 30px;line-height: 30px; font-family: 'lora_italic'; font-size:18px; }
 
-#guide { font-size:14px; line-height: 24px; margin-bottom:30px; }
+#guide { font-size:14px; line-height: 24px; margin-bottom:30px; padding-top:30px;border-top:1px solid #eee}
 #guide li { display: inline; }
 #guide li b { color:#999; }
 #guide li action { font-family: 'lora_italic' }
 
-#index { font-size:16px; line-height: 24px; margin-bottom: 30px; }
-#index li {list-style-type: upper-roman;display: list-item; }
+#index { line-height: 30px;margin-bottom: 30px; }
+#index li {  }
 #index ul { display:block; font-family: 'lora_italic'; margin-bottom: 15px }
 #index ul li { list-style-type: circle; display: inline; text-transform: capitalize; }
 #index li action { font-family: 'lora_bold_italic' }

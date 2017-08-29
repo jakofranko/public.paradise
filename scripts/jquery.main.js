@@ -19,8 +19,6 @@ $(document).ready(function()
 	vesselUrl = window.location.pathname.replace("/","");
 	vesselId = parseInt(vesselUrl.split("+")[0]);
 
-	$("input").focus();
-
 	$(document).on('keydown', 'input', function(e) {
 	  if(e.which != 13) { return; }
 	  window.location = vesselId+"+"+$("input").val().replace(/\ /g,"+");
@@ -46,4 +44,6 @@ $(document).ready(function()
 	{
 		$(".forum").addClass("expanded");
 	});
+
+	$(".terminal input").focus();
 });
