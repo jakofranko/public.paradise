@@ -535,3 +535,84 @@ ul.basic li action-link {
   border-top-color: #000;
   animation: spinner .8s linear infinite;
 }
+
+@media (width <= 1144px) {
+    body {
+        padding: 10px;
+    }
+
+    view {
+        order: 1;
+        border-top-left-radius: 3px;
+    }
+
+    inventory {
+        order: 2;
+        margin-right: 0;
+        margin-left: 3px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 3px;
+    }
+
+    .terminal {
+        order: 3;
+        margin-top: 3px;
+    }
+
+    .terminal input {
+        width: calc(var(--view-width) + var(--inventory-width));
+        border: none;
+    }
+
+    chat {
+        order: 4;
+        width: calc(var(--view-width) + var(--inventory-width));
+        margin-left: 0;
+        margin-top: 3px;
+        border-top-right-radius: 0;
+    }
+}
+    
+@media (width <= 840px) {
+    view {
+        order: 1;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    inventory {
+        order: 3;
+        margin-top: 3px;
+        margin-right: 3px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 0;
+    }
+
+    .terminal {
+        order: 2;
+        margin-top: 3px;
+    }
+
+    .terminal input {
+        width: 100%;
+        border: none;
+    }
+
+    chat {
+        order: 4;
+        width: var(--chat-width);
+        border-top-right-radius: 3px;
+    }
+}
+
+@media (width <= 544px) {
+    inventory {
+        border-top-left-radius: 0;
+        width: 100%;
+    }
+
+    chat {
+        width: 100%;
+        border-top-right-radius: 0;
+    }
+}
